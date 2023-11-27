@@ -80,7 +80,7 @@ class GradCAM: #this class exists to overlay a heat activation map to an input i
 		# apply the supplied color map to the heatmap and then
 		# overlay the heatmap on the input image
 		heatmap = cv2.applyColorMap(heatmap, colormap)
-		output = cv2.addWeighted(image, alpha, heatmap, 1 - alpha, 0)
+		#output = cv2.addWeighted(image, alpha, heatmap, 1 - alpha, 0)
 		# return a 2-tuple of the color mapped heatmap and the output,
 		# overlaid image
-		return (heatmap, output)
+		return (heatmap)
